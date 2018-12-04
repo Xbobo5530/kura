@@ -8,6 +8,7 @@ const FIELD_QUESTION = 'question';
 const FIELD_VOTES = 'votes';
 const FIELD_CHOICES = 'choices';
 const FIELD_TYPE = 'type';
+const FIELD_TAGS = 'tags';
 
 /// question types
 const Q_TYPE_YES_NO = 0;
