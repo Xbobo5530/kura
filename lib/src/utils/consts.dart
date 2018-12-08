@@ -15,7 +15,7 @@ const Q_TYPE_YES_NO = 0;
 const Q_TYPE_STAR = 1;
 const Q_TYPE_MULTIPLE_CHOICE = 2;
 
-/// colors
-const COLOR_PRIMARY = Color(0xFF00695c);
-const COLOR_DRAWER = Color(0xFF439889);
-const COLOR_BACKGROUND = Color(0xFFf5f5f5);
+/// app info urls
+const URL_MORE = 'http://soko.nyayozangu';
+const URL_CALL = 'tel:+255713810803';
+const URL_EMAIL = 'mailto:family.nyayozangu.com?subject=KuraApp';

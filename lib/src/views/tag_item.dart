@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kura/src/utils/consts.dart';
+import 'package:kura/src/utils/color.dart';
 
 class TagItemView extends StatelessWidget {
   final String  tag;

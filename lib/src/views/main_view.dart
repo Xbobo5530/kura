@@ -1,41 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:kura/src/mock_data/mock_data.dart';
-import 'package:kura/src/mock_data/mock_tags.dart';
-import 'package:kura/src/views/question_card.dart';
-import 'package:kura/src/views/tag_item.dart';
+import 'package:kura/src/blocs/bloc_provider.dart';
+import 'package:kura/src/utils/codes.dart';
+import 'package:kura/src/views/add_question_view.dart';
+import 'package:kura/src/views/bookmark_view.dart';
+import 'package:kura/src/views/help_view.dart';
+import 'package:kura/src/views/home_view.dart';
+import 'package:kura/src/views/info_view.dart';
+import 'package:kura/src/views/my_questions_view.dart';
+import 'package:kura/src/views/recommendations_view.dart';
 
 class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _searchSection = Container(
-      
-    );
-    final _questionsSection = Center(
-      child: Stack(
-        children: allQuestions
-            .map((question) => QuestionCardView(question: question))
-            .toList(),
-      ),
-    );
-
-    final _tagsSection = Padding(
-        padding: const EdgeInsets.all(8),
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: 28,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: mockTags.map((tag) => TagItemView(tag: tag)).toList(),
-          ),
-        ));
-    return Column(
-      children: <Widget>[
-        _searchSection,
-        Expanded(
-          child: _questionsSection,
-        ),
-        _tagsSection
-      ],
+    final bloc = BlocProvider.of(context);
+    return StreamBuilder<NavItem>(
+      // initialData: NavItem.home,
+      stream: bloc.currentPage,
+      builder: (context, snapshot) {
+        switch (snapshot.data) {
+          case NavItem.home:
+            return HomeView();
+            break;
+          case NavItem.addQuestion:
+            return AddQuestionView();
+            break;
+          case NavItem.bookmarks:
+            return BookmarkView();
+            break;
+          case NavItem.myQuestions:
+            return MyQuestionsView();
+            break;
+          case NavItem.help:
+            return HelpView();
+            break;
+          case NavItem.recommendations:
+            return RecommendationsView();
+            break;
+          case NavItem.info:
+            return InfoView();
+            break;
+          default:
+            return HomeView();
+        }
+      },
     );
   }
 }
