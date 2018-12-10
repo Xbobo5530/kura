@@ -1,3 +1,10 @@
+const profileText = 'Ukurasa wangu'; // 'About Kura';
+const homeText = 'Nyumbani'; //'Home';
+const addQuestionText = 'Uliza swali'; //'Add a question';
+const bookmarksText = 'Kumbukumbu'; //'Bookmarks';
+const myQuestionText = 'Maswali yangu'; //'My questions';
+const recomendationsText = 'Mapendekezo'; //'Recommendations';
+const helpText = 'Msaada'; //'Help';
 const appInfoText = 'Kuhusu Kura'; // 'About Kura';
 
 const descriptionText = 'Maelezo'; // 'Description';

@@ -19,3 +19,7 @@ const Q_TYPE_MULTIPLE_CHOICE = 2;
 const URL_MORE = 'http://soko.nyayozangu';
 const URL_CALL = 'tel:+255713810803';
 const URL_EMAIL = 'mailto:family.nyayozangu.com?subject=KuraApp';
+
+/// flex
+const FLEX_CHOICE = 'choice_flex';
+const FLEX_REMAINING = 'remainig_flex';

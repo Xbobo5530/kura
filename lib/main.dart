@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
           primaryColorLight: COLOR_PRIMARY_LIGHT,
           secondaryHeaderColor: COLOR_SECONDARY,
           accentColor: COLOR_PRIMARY_LIGHT,
-          
+          dividerColor: COLOR_PRIMARY
+
         ),
         home: MyHomePage(),
       ),
